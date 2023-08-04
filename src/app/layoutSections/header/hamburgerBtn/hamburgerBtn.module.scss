@@ -1,0 +1,124 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.hamburgerBtn {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0;
+
+  .hamburger {
+    position: relative;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: $primary-700;
+    border-radius: 0.5rem;
+    transform: translateY(1.4rem);
+    transition: all 0.5s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 3rem;
+      height: 0.3rem;
+      background-color: $primary-700;
+      border-radius: 0.5rem;
+      transform: translateY(-1rem);
+      transition: all 0.5s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 3rem;
+      height: 0.3rem;
+      background-color: $primary-700;
+      border-radius: 0.5rem;
+      transform: translateY(1rem);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .menu {
+      .menuCover {
+      }
+    }
+  }
+
+  .times {
+    position: relative;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    // transform: translateX(-50px);
+    transform: translateY(1.4rem);
+    transition: all 0.5s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3rem;
+      height: 0.3rem;
+      background-color: $primary-700;
+      border-radius: 0.5rem;
+      // transform: rotate(45deg) translate(3.5rem, -3.5rem);
+      transform: rotate(45deg);
+      transition: all 0.5s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3rem;
+      height: 0.3rem;
+      background-color: $primary-700;
+      border-radius: 0.5rem;
+      // transform: rotate(-45deg) translate(3.5rem, 3.5rem);
+      transform: rotate(-45deg);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .menu {
+      position: absolute;
+      top: 50px; left: 0px;
+      width: 110vw;
+      background-color: $white-100;
+      opacity: 1;
+      transform: translateX(-82%);
+      padding: 50px;
+      
+      color: $primary-700;
+
+      .menulist {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-weight: 700;
+        
+        .menuCover {
+  
+        }
+      }
+      
+    }
+  }
+  // times
+}
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .hamburgerBtn {
+    opacity: 1;
+  }
+}
+// md

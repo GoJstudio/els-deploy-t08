@@ -1,0 +1,61 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.sns {
+  display: flex;
+  gap: 20px;
+
+  .link {
+    .icon {
+      font-size: 3.2rem;
+      transition: 0.4s;
+
+      &:hover {
+        color: $secondary-400;
+      }
+    }
+  }
+  // link
+}
+// sns
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .sns {
+    gap: 20px;
+
+    .link {
+      .icon {
+        font-size: 3.2rem;
+      }
+    }
+    // link
+  }
+  // sns
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .sns {
+    gap: 12px;
+
+    .link {
+      .icon {
+        font-size: 2.4rem;
+      }
+    }
+    // link
+  }
+  // sns
+}
+// sm

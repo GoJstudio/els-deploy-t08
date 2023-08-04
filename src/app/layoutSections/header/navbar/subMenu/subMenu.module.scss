@@ -1,0 +1,32 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+
+.submenu {
+  position: absolute;
+  top: 35px; left: 15px;
+  color: black;
+  background-color: $white-100;
+  border-radius: 4px;
+  padding: 20px 40px 20px 15px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+
+  .sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .subitem {
+      @include menu-default;
+      font-weight: 600;
+    }
+  }
+}
+// submenu

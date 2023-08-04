@@ -1,0 +1,84 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+
+.navbar {
+  .navlist {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .navmenu {
+      position: relative;
+      @include menu-default;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: 0.4s;
+      padding: 8px 16px;
+
+      .subCover {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+      }
+
+      &:hover {
+        transition: color 0.4s ease;
+
+        .subCover {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      
+      &:last-child {
+        background-color: $primary-700;
+        color: $white-100;
+        border-radius: 999px;
+
+        &:hover {
+          background-color: $secondary-400;
+          transition: background-color 0.4s ease;
+        }
+      }
+      
+      a {
+        font-weight: 600;
+      }
+    }
+    // navmenu
+  }
+  // navlist
+}
+// navbar
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .navbar {
+    a {
+      font-weight: 500;
+      font-size: var(--body-md);
+    }
+  }
+  // navbar
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .navbar {
+    display: none;
+  }
+  // navbar
+}
+// md

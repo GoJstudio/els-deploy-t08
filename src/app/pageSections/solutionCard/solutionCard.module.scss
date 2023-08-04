@@ -1,0 +1,137 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.card {
+  width: 320px;
+
+  .contents {
+    @include flex-col-center(24px);
+
+    .text {      
+      .title {
+        text-align: center;
+      }
+  
+      .desc {
+        line-height: 150%;
+        margin-top: 16px;
+      }
+    }
+  }
+  // contents
+}
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .card {
+    width: 300px;
+  }
+  // card
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .card {
+    width: 280px;
+
+    .contents {
+      .desc {
+        // text-align: center;
+      }
+    }
+
+  }
+  // card
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .card {
+    width: 550px;
+  
+    .contents {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 56px;
+
+      .text {
+        width: 420px;
+
+        .title {
+          text-align: start;
+        }
+        
+        .desc {
+          text-align: start;
+        }
+      }
+      // text
+    }
+    // contents
+  }
+  // card
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .card {
+    width: 100%;
+    max-width: 550px;
+  
+    .contents {
+      gap: 40px;
+
+      .text {
+        width: 75%;
+        max-width: 420px;
+      }
+    }
+    // contents
+  }
+  // card
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .card {
+    width: 100%;
+    max-width: 370px;
+  
+    .contents {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+
+      .text {
+        width: 100%;
+        
+        .title {
+          text-align: center;
+        }
+
+        .desc {
+          text-align: center;
+        }
+      }
+    }
+    // contents
+  }
+  // card
+}
+// xs

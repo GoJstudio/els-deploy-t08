@@ -1,0 +1,173 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.contents {
+  width: 100%;
+  max-width: 1324px;
+  display: flex;
+  justify-content: space-between;
+
+  &.odd {
+    flex-direction: row;
+  }
+  
+  &.even {
+    flex-direction: row-reverse;
+  }
+
+  .imageContent {
+    // Image condition
+    position: relative;
+    width: 43%;
+    
+    .img {
+      object-fit: contain;
+    }
+    // ...Image condition
+  }
+  // imageContent
+
+  .textContent {
+    @include flex-col-center(48px);
+    width: 43%;
+    color: $neutral-600;
+    align-items: flex-start;
+
+    .text {      
+      .title {
+        color: $primary-700;
+        margin-bottom: 32px;
+      }
+
+      .desc {
+        line-height: 150%;
+        white-space: pre-line;
+      }
+    }
+
+    .btn {
+      background-color: $primary-700;
+      color: $white-100;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 12px 20px;
+      transition: 0.4s;
+    }
+  }
+  // textContent
+}
+// contents
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .contents {
+    .imageContent {
+      width: 49%;
+      max-width: 565px;
+    }
+    // imageContent
+    
+    .textContent {
+      width: 49%;
+      max-width: 565px;
+    }
+    // textContent
+  }
+  // contents
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .contents {
+    .imageContent {
+      max-width: 547px;
+    }
+    // imageContent
+    
+    .textContent {
+      // align-items: center;
+    }
+    // textContent
+  }
+  // contents
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .contents {
+    align-items: center;
+    gap: 40px;
+    
+    &.odd,
+    &.even {
+      flex-direction: column;
+    }
+
+    .imageContent {
+      width: 85%;
+      max-width: 700px;
+      height: 350px;
+    }
+    // imageContent
+    
+    .textContent {
+      width: 85%;
+      max-width: 700px;
+      align-items: flex-start;
+    }
+    // textContent
+  }
+  // contents
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .contents {
+    .imageContent {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+    }
+    // imageContent
+    
+    .textContent {
+      width: 100%;
+      max-width: 600px;
+    }
+    // textContent
+  }
+  // contents
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .contents {
+    .imageContent {
+      height: 250px;
+    }
+    // imageContent
+
+    .textContent {
+      align-items: center;
+    }
+    // textContent
+  }
+  // contents
+}
+// xs

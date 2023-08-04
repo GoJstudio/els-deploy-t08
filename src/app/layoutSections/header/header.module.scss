@@ -1,0 +1,68 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.header {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  background-color: $white-100;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+
+  .container {  
+    @include container-flex-between;
+
+    .menuContents {
+      width: 66%;
+      height: 104px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    // menuContents
+  }
+  // container
+}
+// header
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .header {
+    .container {
+      .menuContents {
+        width: 72%;
+      }
+    }
+    // container
+  }
+  // header
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .header {
+    .menuContents {
+      @include flex-row-center
+    }
+  }
+  // header
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .header {
+  }
+  // header
+}
+// sm

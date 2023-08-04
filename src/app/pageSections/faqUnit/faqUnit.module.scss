@@ -1,0 +1,68 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.unit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid $neutral-500;
+  border-radius: 8px;
+  padding: 12px 24px;
+
+  .headline {
+    @include flex-row-center(24px);
+    width: 100%;
+    justify-content: space-between;
+
+    .question {
+      font-size: var(--body-lg);
+      font-weight: 400;
+    }
+
+    .icon {
+      cursor: pointer;
+      color: $primary-700;
+      font-size: 32px;
+      transition: all 0.2s ease-out;
+
+      &.up {
+        transform: rotate(180deg);
+      }
+    }
+    // arrow
+
+  }
+  // headline
+
+  .desc {
+    width: 90%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 3s cubic-bezier(0, 1, 0, 1);
+
+    &.open {
+      max-height: 9999px;
+      transition: max-height 3s ease-in-out;
+    }
+
+    hr {
+      margin: 16px 0;
+    }
+
+    .answer {
+      white-space: pre-line;
+      line-height: 1.5;
+      padding-left: 16px;
+    }
+  }
+  // desc
+}
+// unit

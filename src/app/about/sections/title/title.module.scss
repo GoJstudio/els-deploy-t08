@@ -1,0 +1,27 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.title {
+  width: 100vw;
+  height: 310px;
+  color: $white-100;
+
+  .container {
+    @include container-flex-between;
+
+    .headline {
+      width: 100%;
+      font-size: var(--d5);
+      font-weight: 300;
+      text-align: center;
+      white-space: pre-line;
+    }
+  }
+}

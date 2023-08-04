@@ -1,0 +1,87 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+
+.tabmenu {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .tablist {
+    display: flex;
+    justify-content: space-between;
+    
+    .tabItem {
+      @include menu-default;
+      color: $black-100;
+      font-weight: 400;
+      transition: 0.4s;
+      padding: 8px 16px;
+
+      a {
+        font-size: var(--body-lg);
+        font-weight: 700;
+      }
+    }
+    // tabItem
+  }
+  // tablist
+}
+// tabmenu
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .tabmenu {
+    width: 980px;
+  }
+  // tabmenu
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .tabmenu {
+    width: 800px;
+  }
+  // tabmenu
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .tabmenu {
+    width: 650px;
+  }
+  // tabmenu
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .tabmenu {
+    display: none;
+  }
+  // tabmenu
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .tabmenu {
+    display: none;
+  }
+  // tabmenu
+}
+// xs

@@ -1,0 +1,131 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.customers {
+  color: $black-100;
+  background-color: $white-100;
+  padding: 64px 0;
+
+  .container {
+    @include container-flex-between(64px);
+    flex-direction: column;
+      
+    .headline {
+      @include flex-col-center(8px);
+      width: 100%;
+      
+      .desc {
+        text-align: center;
+      }
+    }
+
+    .imageContent {
+      // Image condition
+      position: relative;
+      width: 81%;
+      max-width: 1200px;
+      height: 370px;
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+      
+      .img {
+        object-fit: cover;
+      }
+      // ...Image condition
+    }
+    // imageContent
+
+  }
+  // container
+}
+// customers
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .customers {
+    .container {
+      .imageContent {
+        height: 340px;
+      }
+    }
+  }
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .customers {
+    .container {      
+      .headline {
+        width: 87%;
+        max-width: 905px;
+      }
+
+      .imageContent {
+        width: 87%;
+        max-width: 905px;
+        height: 300px;
+      }
+    }
+  }
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .customers {
+    .container {      
+      .headline {
+        width: 100%;
+        max-width: 830px;
+      }
+
+      .imageContent {
+        width: 100%;
+        max-width: 830px;
+        height: 270px;
+      }
+    }
+  }
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .customers {
+    .container {
+      gap: 48px;
+      
+      .headline {
+        width: 100%;
+        text-align: center;
+      }
+
+      .imageContent {
+        width: 100%;
+        height: 240px;
+      }
+    }
+  }
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .customers {
+    .container {
+    }
+  }
+}
+// xs

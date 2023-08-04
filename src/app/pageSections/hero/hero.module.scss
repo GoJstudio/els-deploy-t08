@@ -1,0 +1,225 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.hero {
+  // Image background condition
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  padding: 0;
+  // ...Image background condition
+  
+  // Image cover
+  &::after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .imageContent {
+    // Image background condition
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // ...Image background condition
+
+    .heroImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  }
+
+  .container {
+    @include container-flex-between;
+    padding: 0 80px;
+
+    .textContents {
+      z-index: 50;
+      position: absolute;
+      top: 55%;
+      width: 52%;
+      max-width: 800px;
+      color: $white-100;
+
+      .title {
+        font-size: var(--h2);
+
+        p {
+          font-size: var(--h4);
+          font-weight: 700;
+        }
+      }
+
+      .desc {
+        width: 88%;
+        max-width: 700px;
+        font-weight: 300;
+        margin: 24px 0;
+      }
+    }
+
+    .navigation {
+      z-index: 50;
+      position: absolute;
+      bottom:2%; left: 50%;
+      transform: translateX(-50%);
+      color: $white-100;
+
+      .icon {
+        margin: 0 5px;
+      }
+    }
+  }
+  // container
+}
+// hero
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .hero {
+    height: 50vh;
+
+    .container {
+
+      .textContents {
+
+        .desc {
+          width: 92%;
+        }
+      }
+
+
+    }
+    // container
+  }
+  // hero
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .hero {
+    height: 50vh;
+
+    .container {
+      padding: 0 40px;
+
+      .textContents {
+        width: 74%;
+        
+        .desc {
+          width: 80%;
+        }
+      }
+    }
+    // container
+  }
+  // hero
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .hero {
+    height: 45vh;
+
+    .container {
+
+      .textContents {
+        @include flex-col-center;
+        top: 38%;
+        width: 74%;
+
+        .title {
+          @include flex-col-center;
+  
+          p {
+            @include flex-col-center;
+          }
+        }
+        
+        .desc {
+          width: 90%;
+          max-width: 570px;
+        }
+      }
+    }
+    // container
+  }
+  // hero
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .hero {
+    height: 40vh;
+
+    .container {
+      @include flex-col-center;      
+      
+      .textContents {
+        width: 100%;
+        
+        .desc {
+          width: 85%;
+          max-width: 520px;
+          text-align: justify;
+        }
+      }
+    }
+    // container
+  }
+  // hero
+}
+// sm
+
+
+// @media screen and (max-width: 450px) ..........................
+@include xs {
+  .hero {
+    height: 40vh;
+
+    .container {
+      
+      .textContents {
+
+        .title {
+          font-size: var(--h3);
+          text-align: center;
+  
+          p {  
+            font-size: var(--h5);
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+        
+        .desc {
+          display: none;
+        }
+      }
+    }
+    // container
+  }
+  // hero
+}
+// xs

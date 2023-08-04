@@ -1,0 +1,82 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.logo {  
+  @include flex-col-center;
+  width: 220px;
+  height: 104px;
+
+  .link {
+    color: $primary-700;
+    text-align: center;
+    transition: 0.4s;
+
+    &.white {
+      color: $white-100;
+    }
+  
+    .name {
+      font-weight: 700;
+      line-height: 100%;
+
+      &.normal {
+        font-weight: 300;
+      }
+    }
+
+    .slogan {
+      font-weight: 400;
+      line-height: 150%;
+      // letter-spacing: 1.5px;
+    }
+    
+    .initial {
+      display: flex;
+      justify-content: center;
+      
+      p {
+        font-size: var(--body-xs);
+        margin-right: 4px;
+        letter-spacing: -0.5px;
+        
+        strong {
+          font-size: var(--body-sm);
+          font-weight: 700;
+        }
+      }
+    }
+
+    &:hover {
+      color: $secondary-400;
+    }
+  }
+  // link
+}
+// logo
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .logo {
+    width: 200px;
+  }
+  // logo
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .logo {
+    width: 195px;
+  }
+  // logo
+}
+// sm

@@ -1,0 +1,101 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.downLink {
+  background-color: $primary-700;
+  padding: 64px 0;
+
+  .container {
+    @include container-flex-between;
+    width: 1100px;
+    
+    .title {
+      color: $white-100;
+      font-weight: 300;
+    }
+      
+    .btn {
+      color: $white-100;
+      background-color: $secondary-500;
+      border-radius: 8px;
+      padding: 12px 24px;
+      
+    }
+  }
+  // container
+}
+// downLink
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .downLink {
+    .container {
+      max-width: 1100px;
+    }
+    // container
+  }
+  // downLink
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .downLink {
+    .container {
+      flex-direction: column;
+      gap: 40px;
+    }
+    // container
+  }
+  // downLink
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .downLink {
+    .container {
+
+    }
+    // container
+  }
+  // downLink
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .downLink {
+    .container {
+      .title {
+        text-align: center;
+      }
+    }
+    // container
+  }
+  // downLink
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .downLink {
+    .container {
+    }
+    // container
+  }
+  // downLink
+}
+// xs

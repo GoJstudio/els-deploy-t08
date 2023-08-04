@@ -1,0 +1,124 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.faqs {
+  color: $black-100;
+  background-color: $neutral-50;
+  padding: 64px 0 96px;
+
+  .container {    
+    @include container-flex-between(5.6rem);
+    flex-direction: column;
+    
+    .headline {
+      @include flex-col-center(8px);
+
+      .short {
+        display: none;
+      }
+    }
+    
+    .faqUnits {
+      @include flex-col-center(40px);
+      width: 70%;
+      max-width: 1000px;
+    }
+  }
+  // container
+}
+// faqs
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .faqs {
+    .container {
+    }
+    // container
+  }
+  // faqs
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .faqs {
+    .container {
+      .faqUnits {
+        width: 75%;
+        max-width: 770px;
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .faqs {
+    .container {
+      .faqUnits {
+        width: 100%;
+        max-width: 730px;
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .faqs {
+    .container {
+      .headline {
+        .title {
+          display: none;
+        }  
+
+        .short {
+          display: block;
+        }
+
+        .desc {
+          width: 70%;
+          text-align: center;
+        }
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .faqs {
+    .container {
+      .headline {
+        .desc {
+          width: 70%;
+          text-align: center;
+        }
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// xs

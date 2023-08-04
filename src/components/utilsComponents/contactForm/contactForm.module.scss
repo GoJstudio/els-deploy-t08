@@ -1,0 +1,66 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    font-size: 1.6rem;
+
+    .name, .email, .phone, .message {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    input, textarea {
+      width: 100%;
+      border: 1px solid;
+      border-radius: 4px;
+      padding: 0.4rem 0.8rem;
+    }
+
+    input {
+      height: 3.2rem;
+    }
+  
+    .message textarea {
+    font-size: 1.6rem;
+    resize: none;
+    }
+
+    .btn {
+      cursor: default;
+      color: $white-100;
+      background-color: $primary-700;
+      font-size: 1.6rem;
+      border-radius: 8px;
+      padding: 12px 24px;
+
+      &.active {
+        cursor: pointer;
+        background-color: #2F7186;
+      }
+    }
+  }
+  // form
+}
+// contact

@@ -1,0 +1,117 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.works {
+  color: $black-100;
+  background-color: $neutral-50;
+  padding: 64px 0 96px;
+
+  .container {
+    @include container-flex-between(72px);
+    flex-direction: column;
+
+    .headline {
+      @include flex-col-center(8px);
+      width: 500px;
+      
+      .title {
+        white-space: nowrap;
+      }
+      
+      .desc {
+        text-align: center;
+      }
+    }
+
+    .cards {
+      @include flex-row-center;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 100%;
+      max-width: 1450px;
+    }
+  }
+  // container
+}
+// works
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .works {
+    .container {
+      .cards {
+      }
+
+    }
+    // container
+  }
+  // works
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .works {
+    .container {
+      .cards {
+      }
+    }
+    // container
+  }
+  // works
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .works {
+    .container {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+      }
+    }
+    // container
+  }
+  // works
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .works {
+    .container {
+      .cards {
+        flex-direction: column;
+        gap: 72px;
+      }
+    }
+    // container
+  }
+  // works
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .works {
+    .container {
+    }
+    // container
+  }
+  // works
+}
+// xs

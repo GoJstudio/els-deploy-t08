@@ -1,0 +1,53 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.map {
+  width: 100%;
+  height: 50vh;
+}
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .map {
+  }
+  // map
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .map {
+    height: 45vh;
+  }
+  // map
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .map {
+    height: 40vh;
+  }
+  // map
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .map {
+    height: 40vh;
+  }
+  // map
+}
+// sm

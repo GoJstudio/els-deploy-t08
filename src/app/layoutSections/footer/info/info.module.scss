@@ -1,0 +1,57 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.contact {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  .title {
+    font-weight: 700;
+    transition: 0.4s;
+  }
+
+  .item {
+    display: flex;
+    gap: 8px;
+
+    .icon { 
+      font-size: 2.0rem;
+    }
+
+    p {
+      font-size: var(--body-sm);
+    }
+  }
+  // item
+}
+// contact
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .contact {
+    width: 200px;
+  }
+  // contact
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .contact {
+    width: 195px;
+  }
+  // contact
+}
+// sm

@@ -1,0 +1,45 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.accordion {
+  max-width: 30rem;
+  margin-bottom: 1rem;
+
+  .container {
+    @include container-flex-between;
+    flex-direction: column;    
+  }
+}
+
+// Header
+.btn {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  padding: 1.3rem;
+
+  &:hover {
+    color: $white-100;
+    background-color: $primary-700;
+  }
+}
+
+// Content
+.content {
+  color: $white-100;
+  background-color: $secondary-700;
+  font-size: 1.6rem;
+  padding: 1.3rem;
+}

@@ -1,0 +1,73 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.search {
+  height: 40px;
+  display: flex;
+  justify-content:flex-end;
+  
+  .form {
+    width: 50%;
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 30px;
+      background-color: $white-100;
+      outline: none;
+      border: none;
+      border-radius: 999px;
+      padding: 4px 8px;
+      padding-left: 50px;
+      box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .iconBox {
+      @include flex-row-center;
+      cursor: pointer;
+      position: absolute;
+      top: 0; left: 0;
+      width: 50px;
+      height: 30px;
+      border-top-left-radius: 999px;
+      border-bottom-left-radius: 999px;
+
+      .icon {
+        color: $primary-700;
+        font-size: 20px;
+      }
+
+    }
+
+  }
+}
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .search {
+    width: 340px;
+    .form {
+      width: 100%;
+    }
+  }
+  // search
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .search {
+    display: none;
+  }
+  // search
+}
+// sm

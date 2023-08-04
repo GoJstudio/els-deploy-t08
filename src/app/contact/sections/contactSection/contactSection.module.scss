@@ -1,0 +1,112 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.contact {
+  padding: 64px 0;
+
+  .container {
+    @include container-flex-between;
+    justify-content: center;
+
+    .wrapper {
+      width: 100%;
+      max-width: 1324px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .comp {
+        width: 57%;
+      }
+    }
+
+  }
+}
+// contact
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .contact {
+    .container {
+      .wrapper {
+      }
+    }
+  }
+  // contact
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .contact {
+    .container {
+      .wrapper {
+        max-width: 1040px;
+  
+        .comp {
+          width: 49%;
+
+          .title {
+            font-size: var(--h3);
+          }
+        }
+      }
+    }
+  }
+  // contact
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .contact {
+    .container {
+      .wrapper {
+        width: 710px;
+        flex-direction: column-reverse;
+        gap: 72px;
+  
+        .comp {
+          width: 90%;
+
+          .title {
+            width: 100%;
+            font-size: var(--h2);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  // contact
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .contact {
+    .container {
+      .wrapper {
+        width: 100%;
+        max-width: 550px;
+  
+        .comp {
+          width: 100%;
+        }
+      }
+    }
+  }
+  // contact
+}
+// sm

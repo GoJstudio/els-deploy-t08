@@ -1,0 +1,163 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.card {
+  cursor: pointer;
+  width: 380px;
+  background-color: $white-100;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+
+  &.blue {
+    color: $white-100;
+    background-color: $primary-700;
+  }
+  
+  .contents {
+    @include flex-col-center;
+    justify-content: space-between;
+    
+
+    .imageContent {
+      // Image condition
+      position: relative;
+      width: 100%;
+      height: 220px;
+      
+      .img {
+        object-fit: cover;
+      }
+      // ...Image condition
+    }
+    // imageContent
+
+    .textContent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 32px 16px;      
+
+      .date {
+        font-weight: 700;
+      }      
+      
+      .text {
+        .desc {
+          line-height: 150%;
+          margin-top: 12px;
+        }
+      }
+    }
+    // textContent
+  }
+  // contents
+}
+// card
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .card {
+    width: 29%;
+    max-width: 380px;
+
+    .contents {
+      .imageContent {
+        height: 200px;
+      }
+
+      .textContent {
+        gap: 16px;
+        padding: 24px 16px;
+      }
+    }
+  }
+  // card
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .card {
+    width: 31%;
+    max-width: 330px;
+
+    .contents {
+      .textContent {
+        padding: 16px 16px;
+      }
+    }
+  }
+  // card
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .card {
+    width: 100%;
+    max-width: 800px;
+
+    .contents {
+      flex-direction: row;
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .textContent {
+        padding: 16px 16px;
+      }
+    }
+  }
+  // card
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .card {
+    width: 350px;
+
+    .contents {
+      flex-direction: column;
+
+      &.reverse {
+        flex-direction: column;
+      }
+
+      .textContent {
+        padding: 32px 16px;
+      }
+    }
+  }
+  // card
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .card {
+    width: 311px;
+
+    .contents {
+      .textContent {
+        padding: 24px 16px;
+      }
+    }
+  }
+  // card
+}
+// xs

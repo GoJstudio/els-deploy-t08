@@ -1,0 +1,104 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.card {
+  width: 100%;
+  max-width: 1324px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .textLeft,
+  .textRight {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+
+    .title {
+      color: $primary-700;
+    }
+
+    .desc {
+      line-height: 150%;
+    }
+  }
+}
+// card
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .card {
+    .textLeft,
+    .textRight {
+      width: 49%;
+      max-width: 565px;
+    }
+  }
+  // card
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .card {
+    .textLeft,
+    .textRight {
+      max-width: 547px;
+    }
+  }
+  // card
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    .textLeft,
+    .textRight {
+      width: 85%;
+      max-width: 700px;
+    }
+  }
+  // card
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .card {
+    .textLeft,
+    .textRight {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+  // card
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .card {
+  }
+  // card
+}
+// xs

@@ -1,0 +1,43 @@
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+
+@mixin container-flex-between($gap:0px) {
+  width: 86%;
+  max-width: 1540px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: $gap;
+
+
+  // @media screen and (max-width: 1539px) ..........................
+  @include xl {
+    width: 88%
+  }
+  // xl
+
+
+  // @media screen and (max-width: 1279px) ..........................
+  @include lg {
+    width: 100%;
+    padding: 0 48px;
+  }
+  // lg
+
+
+  // @media screen and (max-width: 1023px) ..........................
+  @include md {
+    padding: 0 32px;
+  }
+  // md
+
+
+  // @media screen and (max-width: 767px) ..........................
+  @include sm {
+    padding: 0 24px;
+  }
+  // sm
+
+}
+// container-flex-between

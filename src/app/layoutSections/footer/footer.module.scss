@@ -1,0 +1,182 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.footer {
+  background-color: $black-100;
+  color: $white-100;
+  padding: 40px 0 32px;
+
+  .container {
+    @include container-flex-between(24px);
+    flex-direction: column;
+
+    .upper {
+      width: 88%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+
+        .btn {
+          width: 170px;
+          color: $white-100;
+          background-color: $black-100;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          font-weight: 600;
+          border: 1px solid $white-100;
+          border-radius: 8px;
+          padding: 12px 20px;
+          transition: 0.4s;
+
+          &:hover {
+            color: $secondary-400;
+            border: 1px solid $secondary-400;
+          }
+        }
+      }
+      // center
+    }
+    // upper
+
+    .lower {
+      width: 88%;
+      text-align: center;
+
+      .copyright {
+        font-size: var(--body-sm);
+      }
+    }
+    // lower
+  }
+  // container
+}
+// footer
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .footer {
+    .container {
+      .upper,
+      .lower {
+        width: 89%;
+        max-width: 1160px;
+      }
+    }
+    // container
+  }
+  // footer
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .footer {
+    .container {
+      .upper,
+      .lower {
+        width: 100%;
+        max-width: 994px;
+      }
+    }
+    // container
+  }
+  // footer
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .footer {
+    .container {
+      .upper,
+      .lower {
+        width: 100%;
+        max-width: none;
+      }
+    }
+    // container
+  }
+  // footer
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .footer {
+    .container {
+      gap: 32px;
+
+      .upper {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+    // container
+  }
+  // footer
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .footer {
+    .container {
+      gap: 32px;
+
+      .upper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 40px;
+
+        .logo {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .sns {
+            display: block;
+          }
+        }
+
+        .sns {
+          display: none;
+        }
+      }
+      
+
+      .lower {        
+        flex-direction: column-reverse;
+        gap: 16px;
+        text-align: center;
+
+        .copyright, .policies {
+          width: 100%;
+        }
+      }
+    }
+    // container
+  }
+  // footer
+}
+// sm

@@ -1,0 +1,124 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.solutions {
+  color: $black-100;
+  background-color: $neutral-50;
+  padding: 64px 0 72px;
+
+  .container {
+    @include container-flex-between(72px);
+    flex-direction: column;
+
+    .headline {
+      @include flex-col-center(8px);
+      width: 530px;
+      
+      .title {
+        white-space: nowrap;
+      }
+      
+      .desc {
+        text-align: center;
+      }
+    }
+
+    .cards {
+      @include flex-row-center;
+      justify-content: space-between;
+      width: 95%;
+
+      .icon {
+        font-size: 72px;
+      }
+    }
+  }
+  // container
+}
+// solutions
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .solutions {
+    .container {
+      .cards {
+        width: 100%;
+      }
+    }
+    // container
+  }
+  // solutions
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .solutions {
+    .container {
+    }
+    // container
+  }
+  // solutions
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .solutions {
+    .container {
+      .headline {
+        width: 450px;
+      }
+
+      .cards {
+        @include flex-col-center(56px);
+      }
+
+    }
+    // container
+  }
+  // solutions
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .solutions {
+    .container {
+      .cards {
+        .icon {
+          font-size: 64px;
+        }
+      }
+    }
+    // container
+  }
+  // solutions
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .solutions {
+    .container {
+      .headline {
+        width: 100%;
+      }
+    }
+    // container
+  }
+  // solutions
+}
+// xs

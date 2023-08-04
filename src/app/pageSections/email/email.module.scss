@@ -1,0 +1,146 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.email {
+  background-color: $primary-700;
+  padding: 64px 0;
+
+  .container {
+    @include container-flex-between(64px);
+    flex-direction: column;
+
+    .headline {
+      @include flex-col-center(8px);
+      width: 710px;
+      color: $white-100;
+      text-align: center;
+    }
+    // headline
+
+    .signup {
+      @include flex-row-center;
+      gap: 12px;
+
+      input {
+        height: 48px;
+        width: 500px;
+        font-size: var(--body-md);
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 24px;
+      }
+      
+      button {
+        @include flex-row-center;
+        width: 48px;
+        height: 48px;
+        color: $white-100;
+        background-color: $secondary-500;
+        font-size: 24px;
+        border-radius: 8px;
+      }
+    }
+    // signup
+  }
+  // container
+}
+// email
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .email {
+    .container {
+    }
+    // container
+  }
+  // email
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .email {
+    .container {
+      width: 100%;
+      padding: 0 32px;
+    }
+    // container
+  }
+  // email
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .email {
+    .container {
+      padding: 0 24x;
+
+      .signup {
+        input {
+          width: 450px;
+        }
+      }
+    }
+    // container
+  }
+  // email
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .email {
+    .container {
+      .headline {
+        width: 100%;
+      }
+      // headline
+
+      .signup {
+        input {
+          width: 350px;
+        }
+      }
+    }
+    // container
+  }
+  // email
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .email {
+    .container {
+      .headline {
+        width: 100%;
+      }
+      // headline
+
+      .signup {
+        width: 100%;
+
+        input {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+    // container
+  }
+  // email
+}
+// xs

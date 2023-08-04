@@ -1,0 +1,143 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.card {
+  width: 100%;
+  max-width: 1278px;
+
+  .contents {
+    @include flex-row-center;
+    justify-content: space-between;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .imageContent {
+      // Image condition
+      position: relative;
+      width: 48%;
+      height: 200px;
+      
+      .img {
+        object-fit: cover;
+      }
+      // ...Image condition
+    }
+    // imageContent
+
+    .textContent {
+      width: 40%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .text {    
+        .desc {
+          line-height: 150%;
+          margin-top: 16px;
+        }
+      }
+
+      .btnWrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        .btn {
+          color: $white-100;
+          background-color: $primary-700;
+          display: flex;
+          align-items: center;
+          font-size: var(--body-lg);
+          font-weight: 700;
+          padding: 8px;
+
+          .icon {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+  // contents
+}
+// card
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .card {
+    width: 1074px;
+  }
+  // card
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .card {
+    width: 100%;
+    max-width: 1074px;
+  }
+  // card
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .card {
+    width: 600px;
+
+    .contents {
+      flex-direction: column;
+      gap: 24px;
+
+      &.reverse {
+        flex-direction: column;
+      }
+
+      .imageContent {
+        width: 100%;
+      }
+
+      .textContent {
+        width: 100%;
+        height: auto;
+        padding-bottom: 16px;
+        gap: 24px;
+      }
+    }
+  }
+  // card
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .card {
+    width: 352px;
+  }
+  // card
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .card {
+    width: 313px;
+  }
+  // card
+}
+// xs

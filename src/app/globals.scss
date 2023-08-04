@@ -1,0 +1,155 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// Inter, Google Fonts
+// Light-300, Regular-400, Medium-500, Bold-700, Black-900
+
+:root {
+  // Desktop body font-size
+  --body-lg: #{$body-dsk-lg};
+  --body-md: #{$body-dsk-md};
+  --body-sm: #{$body-dsk-sm};
+  --body-xs: #{$body-dsk-xs};
+
+  // Desktop heading font-size
+  --h1: #{$h1-dsk};
+  --h2: #{$h2-dsk};
+  --h3: #{$h3-dsk};
+  --h4: #{$h4-dsk};
+  --h5: #{$h5-dsk};
+  --h6: #{$h6-dsk};
+
+  // Desktop display font-size
+  --d1: #{$d1-dsk};
+  --d2: #{$d2-dsk};
+  --d3: #{$d3-dsk};
+  --d4: #{$d4-dsk};
+  --d5: #{$d5-dsk};
+
+  // Tablet
+  @media screen and (max-width: 1023px) {
+    // Tablet body font-size
+    --body-lg: #{$body-tab-lg};
+    --body-md: #{$body-tab-md};
+    --body-sm: #{$body-tab-sm};
+    --body-xs: #{$body-tab-xs};
+
+    // Tablet heading font-size
+    --h1: #{$h1-tab};
+    --h2: #{$h2-tab};
+    --h3: #{$h3-tab};
+    --h4: #{$h4-tab};
+    --h5: #{$h5-tab};
+    --h6: #{$h6-tab};
+    
+    // Tablet display font-size
+    --d1: #{$d1-tab};
+    --d2: #{$d2-tab};
+    --d3: #{$d3-tab};
+    --d4: #{$d4-tab};
+    --d5: #{$d5-tab};
+  }
+
+  // Mobile
+  @media screen and (max-width: 767px) {
+    // Mobile body font-size
+    --body-lg: #{$body-mob-lg};
+    --body-md: #{$body-mob-md};
+    --body-sm: #{$body-mob-sm};
+    --body-xs: #{$body-mob-xs};
+
+    // Mobile heading font-size
+    --h1: #{$h1-mob};
+    --h2: #{$h2-mob};
+    --h3: #{$h3-mob};
+    --h4: #{$h4-mob};
+    --h5: #{$h5-mob};
+    --h6: #{$h6-mob};
+    
+    // Mobile display font-size
+    --d1: #{$d1-mob};
+    --d2: #{$d2-mob};
+    --d3: #{$d3-mob};
+    --d4: #{$d4-mob};
+    --d5: #{$d5-mob};
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $white-100;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+
+// Typography
+// Inter, Google Fonts
+// Light-300, Regular-400, Medium-500, Bold-700, Black-900
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+h4 {
+  font-size: var(--h4);
+}
+h5 {
+  font-size: var(--h5);
+}
+h6 {
+  font-size: var(--h6);
+}
+
+p, a, ul, li {
+  font-size: var(--body-md);
+  font-weight: 400;
+}
+// Typography
+
+
+
+// autoprefixer Tester.................
+input::placeholder {
+  color: steelblue;
+}
+
+.autoPrefixerTest {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+// autoprefixer Tester.................

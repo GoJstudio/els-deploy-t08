@@ -1,0 +1,31 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.products {
+  padding: 64px 0;
+
+  .container {
+    @include container-flex-between(48px);
+    flex-direction: column;
+
+    .cards {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cardsLow {
+      width: 100%;
+      display: none;
+    }
+
+  }
+  // container
+}

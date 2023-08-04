@@ -1,0 +1,74 @@
+@use 'sass:math';
+
+// Inter, Google Fonts
+// Light-300, Regular-400, Medium-500, Bold-700, Black-900
+
+// Desktop - dsk....................................
+// Bodies: body-dsk
+$body-dsk-lg: 1.8rem;
+$body-dsk-md: 1.6rem;
+$body-dsk-sm: 1.4rem;
+$body-dsk-xs: 1.3rem;
+
+// Headings: h#-dsk
+$h1-dsk: 5.7rem;
+$h2-dsk: 4.8rem;
+$h3-dsk: 4rem;
+$h4-dsk: 3.3rem;
+$h5-dsk: 2.8rem;
+$h6-dsk: 2.3rem;
+
+// Displays: d#-dsk
+$d1-dsk: 9.5rem;
+$d2-dsk: 7.6rem;
+$d3-dsk: 6.1rem;
+$d4-dsk: 4.9rem;
+$d5-dsk: 3.9rem;
+
+
+
+// Tablet - tab....................................
+// Bodies: body-tab
+$body-tab-lg: 1.6rem;
+$body-tab-md: 1.4rem;
+$body-tab-sm: 1.2rem;
+$body-tab-xs: 1.1rem;
+
+// Headings: h#-tab
+$h1-tab: 5rem;
+$h2-tab: 4.2rem;
+$h3-tab: 3.5rem;
+$h4-tab: 2.9rem;
+$h5-tab: 2.4rem;
+$h6-tab: 2rem;
+
+// Displays: d#-tab
+$d1-tab: 8.3rem;
+$d2-tab: 6.7rem;
+$d3-tab: 5.3rem;
+$d4-tab: 4.3rem;
+$d5-tab: 3.4rem;
+
+
+
+// Mobile - mob....................................
+// Bodies: body-tab
+$body-mob-lg: 1.6rem;
+$body-mob-md: 1.4rem;
+$body-mob-sm: 1.2rem;
+$body-mob-xs: 1.1rem;
+
+// Headings: h#-mob
+$h1-mob: 4.2rem;
+$h2-mob: 3.5rem;
+$h3-mob: 2.9rem;
+$h4-mob: 2.4rem;
+$h5-mob: 2rem;
+$h6-mob: 1.7rem;
+
+// Displays: d#-mob
+$d1-mob: 6.7rem;
+$d2-mob: 5.3rem;
+$d3-mob: 4.3rem;
+$d4-mob: 3.4rem;
+$d5-mob: 2.7rem;

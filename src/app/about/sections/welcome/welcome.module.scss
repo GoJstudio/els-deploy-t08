@@ -1,0 +1,119 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.welcome {  
+  .container {
+    @include container-flex-between;
+
+    .textContent {
+      @include flex-col-center(32px);
+      width: 57%;
+      color: $black-100;
+      align-items: flex-start;
+
+      .title {
+        color: $primary-700;
+      }
+
+      .desc {
+        font-size: var(--body-lg);
+        line-height: 150%;
+        white-space: pre-line;
+      }
+    }
+    // textContent
+
+    .imageContent {
+      // Image condition
+      position: relative;
+      width: 37%;
+      max-width: 492px;
+      height: 520px;
+      
+      .img {
+        object-fit: cover;
+      }
+      // ...Image condition
+    }
+    // imageContent
+  }
+  // container
+}
+// welcome
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .welcome {
+
+  }
+  // welcome
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .welcome {
+    .container {
+      .textContent {
+        width: 51%;        
+      }
+      // textContent
+
+    }
+    // container
+  }
+  // welcome
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .welcome {
+    padding: 64px 0;
+
+    .container {
+      justify-content: center;
+
+      .textContent {
+        width: 77%;        
+      }
+
+      .imageContent {
+        display: none;
+      }
+    }
+    // container
+  }
+  // welcome
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .welcome {
+    .container {
+      .textContent {
+        width: 100%;
+
+        .title {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    // container
+  }
+  // welcome
+}
+// sm

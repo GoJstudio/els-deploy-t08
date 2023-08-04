@@ -1,0 +1,100 @@
+// base
+@use '@/styles/base/colorStyles' as *;
+@use '@/styles/base/textStyles' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menu' as *;
+
+.whereTo {
+  width: 440px;
+  background-color: $neutral-50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+
+  .address, .phone, .email {
+    display: flex;
+    gap: 8px;
+    
+    .subTitle {
+      width: 96px;
+      font-size: var(--body-lg);
+      font-weight: 700;
+    }
+    
+    .desc {
+      text-align: left;
+      // white-space: pre-line;
+    }
+  }
+}
+// whereTo
+
+
+// @media screen and (max-width: 1539px) ..........................
+@include xl {
+  .whereTo {
+  }
+  // whereTo
+}
+// xl
+
+
+// @media screen and (max-width: 1279px) ..........................
+@include lg {
+  .whereTo {
+  }
+  // whereTo
+}
+// lg
+
+
+// @media screen and (max-width: 1023px) ..........................
+@include md {
+  .whereTo {
+    width: 70%;
+
+    .address, .phone, .email {      
+      .subTitle {
+        width: 80px;
+      }
+
+      .desc {
+        width: 80%;
+      }
+    }
+  }
+  // whereTo
+}
+// md
+
+
+// @media screen and (max-width: 767px) ..........................
+@include sm {
+  .whereTo {
+    width: 90%;
+
+    .address, .phone, .email {      
+      .subTitle {
+        width: 72px;
+      }
+    }
+  }
+  // whereTo
+}
+// sm
+
+
+// @media screen and (max-width: 499px) ..........................
+@include xs {
+  .whereTo {
+    padding: 16px;
+  }
+  // whereTo
+}
+// xs
