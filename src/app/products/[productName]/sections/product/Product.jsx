@@ -1,5 +1,5 @@
 import ProductCard from '../productCard/ProductCard';
-import TextCard from '../textCard/textCard';
+import TextCard from '../textCard/TextCard';
 
 import styles from './product.module.scss';
 
