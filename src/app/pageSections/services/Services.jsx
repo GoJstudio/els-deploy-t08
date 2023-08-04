@@ -14,8 +14,8 @@ const Services = () => {
   const cardsRef = useRef(null);
 
   const [activeIndex, setActiveIndex] = useState(0);
-  // const [containerWidth, setContainerWidth] = useState(0);
-  // const [cardsWidth, setCardsWidth] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [cardsWidth, setCardsWidth] = useState(0);
   const [movingLength, setMovingLength] = useState(0.0);
 
   useEffect(() => {
