@@ -30,8 +30,11 @@ const HamburgerBtn = () => {
           <div className={styles.menu}>
             <ul className={styles.menulist}>
               {dataHeader.map((headerItem) => (
-                <div className={styles.menuCover}>
-                  <MenuItem key={headerItem.id} headerItem={headerItem} handleMenuToggle={handleMenuToggle} />
+                <div
+                  className={styles.menuCover}
+                  key={headerItem.id}
+                >
+                  <MenuItem headerItem={headerItem} handleMenuToggle={handleMenuToggle} />
                 </div>
               ))}
             </ul>

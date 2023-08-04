@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 
-// import { dataUPS, dataInverter } from './productData';
 import { dataUPS, dataInverter } from './productData';
 import { Title, Product } from './sections';
 
@@ -11,7 +10,6 @@ import styles from './productName.module.scss';
 
 const ProductName = ({params}) => {
   const paramsName = params.productName;
-  const dataTest = dataUPS;
 
   const dataItems = [
     dataUPS,
@@ -21,8 +19,8 @@ const ProductName = ({params}) => {
   const [selectedData, setSelectedData] = useState(dataUPS);
 
   useEffect(() => {
-
     const foundItem = dataItems.find((item) => item.name === paramsName);
+
     if (foundItem) {
         console.log(foundItem);
         setSelectedData(foundItem);
